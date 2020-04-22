@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Title Page-->
+    <title>Dashboard</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+    <!-- Main JS-->
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+
+
+</head>
+
+<body>
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <div class="header-mobile-inner">
+                            
+                                <img src="images/icon/logo.png" href = "index.html" class ="covidlogo" alt="CoolAdmin" />
+                            </div>
+                            <div class="header-button">
+                                
+                                <div class="noti-wrap">
+                                
+                                    <form action="table1.html">
+                                        <input type="submit"  class="au-btn au-btn-icon au-btn--blue" value="Add Case">&nbsp</input>
+                                    </form>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+           
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">Summary</h2>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-t-25">
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c1">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+
+                                                <i class="zmdi zmdi-mood-bad"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>-</h2>
+                                                <span>Admitted</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id="widgetChart1"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c2">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-mood"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>-</h2>
+                                                <span>Recovered</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id="widgetChart2"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c3">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-close-circle"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>-</h2>
+                                                <span>Dead</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id="widgetChart3"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c4">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-trending-up"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>-</h2>
+                                                <span>Total cases</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id="widgetChart4"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="au-card recent-report">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2">Cases by Age</h3>
+                                        <div class="chart-info">
+                                        </div>
+                                        <div class="recent-report__chart">
+                                            <canvas id="ageChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="au-card chart-percent-card">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2 tm-b-5">Cases by Gender</h3>
+                                        <div class="row no-gutters">
+                                            <div class="col-xl-6">
+                                                <div class="chart-note-wrap">
+                                                    <div class="chart-note mr-0 d-block">
+                                                        <span class="dot dot--blue"></span>
+                                                        <span>Male</span>
+                                                    </div>
+                                                    <div class="chart-note mr-0 d-block">
+                                                        <span class="dot dot--red"></span>
+                                                        <span>Female</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="sex-chart">
+                                                        <canvas id="sexChart"></canvas>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="au-card recent-report">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2">Cases by City</h3>
+                                        <div class="chart-info">
+                                            <div class="chart-info__left">
+                                               
+                                               
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="recent-report__chart">
+                                            <canvas id="residenceChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>A project of University of the Philippines Manila </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          
+
+    </div>
+
+
+    <script>
+
+
+    // Request data using D3
+    d3.csv('chartAge.csv').then(makeChart);
+
+    function makeChart(age) {
+
+        var ageGroup = age.map(function(d) {return d.AgeGroup});
+        var count = age.map(function(d) {return d.Count});
+  
+        var chart = new Chart('ageChart', {
+            type: 'horizontalBar',
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                display: false
+                },
+                scales: { 
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            fontSize: 16
+                        }
+                    }]
+                }
+            },
+            data: {
+                labels: ageGroup,
+
+                datasets: [{
+
+                        backgroundColor: ["#58cced", "#3895d3","#1261A0","#072F5F"],
+                        data: count
+
+                    }
+                ]
+            }
+        }) 
+    }
+
+    </script>
+
+    <script>
+        d3.csv('chartSex.csv').then(makeChart);
+
+        function makeChart(sex) {
+
+            var sexGroup = sex.map(function(d) {return d.Sex});
+            var count = sex.map(function(d) {return d.Count});
+  
+
+            var chart = new Chart('sexChart', {
+                type: 'pie',
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: false
+                    },
+                },
+                data: {
+                    labels: sexGroup,
+                    datasets: [{
+                        backgroundColor: ["#58cced", "#ff5349"],
+                        data: count
+                    }]
+                }
+            })
+        }
+    </script>
+    <script>
+
+// Request data using D3
+d3.csv('chartResidence.csv')
+  .then(makeChart);
+
+function makeChart(residence) {
+
+  var residenceGroup = residence.map(function(d) {return d.Residence});
+  var count = residence.map(function(d) {return d.Count});
+  
+
+  var chart = new Chart('residenceChart', {
+    type: 'bar',
+    options: {
+      maintainAspectRatio: false,
+      legend: {
+        display: false
+      },
+      
+    },
+    data: {
+      labels: residenceGroup,
+      datasets: [
+        {
+          data: count
+          
+        }]
+    }
+  })
+}
+    
+</script>
+
+
+</body>
+
+</html>
+<!-- end document-->
