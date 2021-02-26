@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title Page-->
+    <title>Registration</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- Main CSS-->
+    <link href="css/registration_login.css" rel="stylesheet" media="all">
+</head>
+<body style = "background-color: #2a2a2a">
+<!--NAVBAR-->
+<nav class="navbar navbar-expand-lg navbar-registration">
+  <div class="container-fluid">
+    <img src = "images/icon/logo_transparent.png" style = "width: 10%; height: 10%">
+  </div>
+</nav>
+
+<br>
+<!--CONTAINER-->
+<div class = "container">
+	<br>
+	<br>
+	<br>
+	<div class = "registration-form">
+		<!--FIELDS FOR FIRST NAME MIDDLE NAME LAST name-->
+		<text class = "pageTitle">REGISTRATION</text>
+		<br>
+		<br>
+		
+		<div class="row">
+			<!--FIRST ROW WHICH CONTAINS LABELS-->
+				<!-- First Name  -->
+	            <div class="column col-md-4">
+	            	<div class = "form-group">
+						<label class = "registration_login_font">First Name</label>
+						<br>
+						<input type = "text" class = "registration_login_input">
+					</div>
+				</div>
+				<!-- Middle Name  -->
+				<div class="column col-md-4">
+					<div class = "form-group">
+						<label class = "registration_login_font">Middle Name</label>
+						<br>
+						<input type = "text" class = "registration_login_input">
+					</div>
+				</div>
+				<!-- Last Name  -->
+				<div class="column col-md-4">
+					<div class = "form-group">
+						<label class = "registration_login_font">Last Name</label>
+						<br>
+						<input type = "text" class = "registration_login_input">
+					</div>
+				</div>
+		</div>
+		<!--FIELDS FOR EMAIL, PASSWORD AND CONFIRM PASSWORD-->
+		<div class="row">
+
+				<!-- EMAIL  -->
+	            <div class="column col-md-4">
+	            	<div class = "form-group">
+						<label class = "registration_login_font">Email Address</label>
+						<br>
+						<input type = "text" class = "registration_login_input">
+					</div>
+				</div>
+				<!-- PASSWORD  -->
+				<div class="column col-md-4">
+					<div class = "form-group">
+						<label class = "registration_login_font">Password</label>
+						<br>
+						<input type = "text" class = "registration_login_input">
+					</div>
+				</div>
+				<!-- repeat password  -->
+				<div class="column col-md-4">
+					<div class = "form-group">
+						<label class = "registration_login_font">Repeat Password</label>
+						<br>
+						<input type = "text" class = "registration_login_input">
+					</div>
+				</div>
+		</div>
+
+		<!--MOBILE AND LANDLINE-->
+		<div class="row">
+				<!-- EMAIL  -->
+	            <div class="column col-md-6">
+	            	<div class = "form-group">
+						<label class = "registration_login_font">Mobile</label>
+						<br>
+						<input type = "text" class = "registration_login_input">
+					</div>
+				</div>
+				<!-- PASSWORD  -->
+				<div class="column col-md-6">
+					<div class = "form-group">
+						<label class = "registration_login_font">Landline</label>
+						<br>
+						<input type = "text" class = "registration_login_input">
+					</div>
+				</div>
+				
+		</div>
+
+		<!--BUTTON!-->
+
+		<div class="row">
+			<button type="button" class="btn btn-outline-danger" onclick = "index_page()">Register</button>
+		</div>
+	</div>
+
+	
+</div>
+
+<script>
+	function index_page(){
+		location.href = "index.html"
+	}
+</script>
+
+</body>
+</html>
